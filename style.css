@@ -1,16 +1,30 @@
 .father {
   display: grid;
-  grid-template-columns: 250px 250px 250px;
-  grid-template-rows: 100px 50px 300px;
-  gap: 20px;
+  grid-template-columns: auto 200px;
+  grid-template-rows: 100px repeat(2, 200px) 100px;
+  grid-template-areas:
+    "header header header header"
+    "content content . nav"
+    "content content . nav"
+    "footer footer footer footer";
 }
 
-.child {
-  flex-basis: 30%;
-  background: peru;
-  color: white;
-  font-size: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.header {
+  background-color: #2ecc71;
+  grid-area: header;
+}
+
+.content {
+  background-color: lightblue;
+  grid-area: content;
+}
+
+.nav {
+  background-color: purple;
+  grid-area: nav;
+}
+
+.footer {
+  background-color: orange;
+  grid-area: footer;
 }
