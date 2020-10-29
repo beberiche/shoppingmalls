@@ -1,5 +1,6 @@
 @import '_a';
 @import '_h3';
+@import '_lighterFont';
 
 * {
   box-sizing: border-box;
@@ -117,6 +118,239 @@ main {
       &:hover {
         background-color: black;
         color: white;
+      }
+    }
+  }
+}
+
+.theShop {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 80px;
+  div {
+    h4 {
+      margin-top: 80px;
+      @extend %aTitle;
+    }
+    h5 {
+      @extend %lighterFont;
+      margin: 0;
+      opacity: 0.8;
+    }
+  }
+}
+
+.newColors {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  height: 500px;
+  margin-bottom: 50px;
+  div {
+    img {
+      width: 250px;
+      height: 250px;
+      margin-bottom: 50px;
+    }
+    h3 {
+      @extend %aTitle;
+      margin-bottom: 5px;
+    }
+    h4 {
+      margin: 0;
+      @extend %lighterFont;
+      color: gray;
+    }
+    h5 {
+      @extend %aTitle;
+      opacity: 0.5;
+      margin-bottom: 40px;
+    }
+    a {
+      border: 1px solid black;
+      transition: color 0.3s linear, backgoround 0.3s linear;
+      &:hover {
+        background-color: black;
+        color: white;
+      }
+    }
+  }
+}
+
+.giftCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  padding: 10%;
+  background-image: url('/img/giftcard.jpg');
+  background-size: cover;
+  color: white;
+  margin-bottom: 100px;
+  h4 {
+    @extend %aTitle;
+    font-size: 12px;
+  }
+  h3 {
+    @extend %h3Title;
+    font-size: 40px;
+    font-style: italic;
+    font-weight: lighter;
+  }
+  a {
+    border: 1px solid white;
+    transition: color 0.3s linear, backgoround 0.3s linear;
+    &:hover {
+      background-color: white;
+      color: black;
+    }
+  }
+}
+
+.powerCouple {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 100px;
+  h4 {
+    @extend %aTitle;
+    margin-bottom: 5px;
+  }
+  h3 {
+    margin: 30px;
+    @extend %lighterFont;
+  }
+  img {
+    width: 100%;
+    height: 80%;
+    margin-bottom: 50px;
+  }
+  a {
+    border: 1px solid black;
+    transition: color 0.3s linear, backgoround 0.3s linear;
+    &:hover {
+      background-color: black;
+      color: white;
+    }
+  }
+}
+
+.readStory {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  margin-bottom: 100px;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  .readStory_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #f3ede9;
+    h4 {
+      @extend %lighterFont;
+      color: gray;
+      font-style: none;
+      font-size: 15px;
+      margin: 0;
+    }
+    h3 {
+      @extend %lighterFont;
+      color: black;
+      font-size: 30px;
+      opacity: 0.7;
+      margin-bottom: 30px;
+    }
+    a {
+      border: 1px solid black;
+      transition: color 0.3s linear, backgoround 0.3s linear;
+      &:hover {
+        background-color: black;
+        color: white;
+      }
+    }
+  }
+}
+
+.join {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 60px;
+  h4 {
+    @extend %aTitle;
+  }
+  h3 {
+    @extend %lighterFont;
+    font-size: 25px;
+    color: grey;
+    margin-bottom: 50px;
+  }
+  input {
+    border: 0;
+    padding-bottom: 10px;
+    width: 500px;
+    height: 40px;
+    font-size: 20px;
+    border-bottom: 1px solid gray;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  ::placeholder {
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: lighter;
+    opacity: 0.4;
+  }
+}
+
+.followMe {
+  @extend %lighterFont;
+  text-align: center;
+  font-style: none;
+  color: darkgray;
+  opacity: 0.8;
+  margin-bottom: 150px;
+  font-size: 25px;
+  .gray {
+    color: black;
+  }
+}
+
+footer {
+  padding: 65px 20px;
+  background-color: blanchedalmond;
+  .faq {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    div {
+      list-style: none;
+      @extend %aTitle;
+      font-size: 12px;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 2.2px;
+      &:nth-child(1) {
+        border-right: 1px solid black;
+      }
+      &:nth-child(2) {
+        border-right: 1px solid black;
+      }
+      .faqTitle {
+        color: gray;
+        margin-bottom: 50px;
+        padding-top: 0;
+      }
+      li {
+        line-height: 23px;
       }
     }
   }
